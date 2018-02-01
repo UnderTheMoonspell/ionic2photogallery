@@ -1,0 +1,19 @@
+<div class="close-modal" (click)="closeModal()">
+  <ion-icon ios="ios-close" md="md-close">
+  </ion-icon>
+</div>
+
+<div class="photo-counter">
+    {{currentSlide}}/{{imagesSrc?.length}}
+</div>
+
+<ion-slides #slides slidesPerView="1"
+    [initialSlide]="idx"
+    [hidden]="loaded"
+    [loop]="loop"
+    (ionSlideDidChange)="slideChange()">
+    <ion-slide *ngFor="let img of imagesSrc">
+        <img [src]="img.url"/>
+        <div class="title" [innerHTML]="img.description" ></div>
+    </ion-slide>
+</ion-slides>

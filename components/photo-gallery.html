@@ -1,0 +1,20 @@
+<div class="galleryContainer">
+    <div class="galleryIcon">
+        <i class="fa fa-camera"></i>
+    </div>
+
+    <ion-slides #slides
+        slidesPerView="1"
+        spaceBetween="10" pager="true"
+        [loop]="loop"
+        (click)="openImage()"
+        (ionSlideDidChange)="slideChange()"
+        paginationType="fraction"
+        centeredSlides="true"
+        autoHeight="true">
+
+        <ion-slide *ngFor="let img of imagesSrc; let idx = index" >
+            <img [src]="img.url"/>
+        </ion-slide>
+    </ion-slides>
+</div>

@@ -1,0 +1,35 @@
+photo-gallery{
+	.galleryContainer{
+		position: relative;
+
+		.galleryIcon{
+			position: absolute;
+			z-index: 2;
+			top: 8px;
+			left: 8px;
+			width: 34px;
+			height: 34px;
+			background: rgba(0,0,0,0.75);
+			border: 2px solid #FFF;
+			border-radius: 19px;
+			color: #FFF;
+			text-align: center;
+
+			& > i{
+				width: 100%;
+				height: 100%;
+				padding-top: 9px;
+			}
+		}
+	}
+
+	.swiper-pagination-bullet{
+		width: 10px !important;
+		height: 10px !important;
+
+		&.swiper-pagination-bullet-active{
+			background-color: rgba(44,171,203,1) !important;
+			opacity: 1 !important;
+		}
+	}
+}
